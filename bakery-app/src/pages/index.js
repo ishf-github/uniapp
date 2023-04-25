@@ -2,13 +2,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import React,{useState} from 'react'
+// TODO: Fix Zoom Issue
+// TODO: Fix Image Sizing Issue
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [imageList, setImageList] = useState(["/browncow.jpg","/redhat.jpg","/flags.jpg","/bluecloth.jpg"])
+
+  // const inter = Inter({ subsets: ['latin'] })
+  // const imageUrl = "/browncow.jpg"
+  const deleteImage = ()=>{
+    setImageList(imageList.slice(1)) 
+  }
   return (
     <>
-      <div class={styles.backgroundImage}>
+      <div class={styles.backgroundImage} style={{backgroundImage: `url(${imageList[0]}`}}>
         <div class={styles.box}></div>
         <div class={styles.box}></div>
         <div class={styles.box}>
@@ -18,7 +27,7 @@ export default function Home() {
         <div class={styles.box}></div>
         <div class={styles.box}></div>
         <div class={styles.box}>
-          <button class={styles.deletePhotoButton}><img class={styles.deleteImage} src="/Delete.svg"/></button>
+          <button class={styles.deletePhotoButton} onClick={deleteImage}><img class={styles.deleteImage} src="/Delete.svg"/></button>
         </div>
         <div class={styles.box}>
         <button class={styles.nextPhotoButton}>Next Photo</button>

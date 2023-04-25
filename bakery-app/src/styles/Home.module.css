@@ -9,6 +9,11 @@
   display: grid;
   grid-template-rows: 200px 200px 200px;
   grid-template-columns: 200px 200px 200px;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-position: center;
+  background-attachment: fixed;
 }
 
 /* body {
@@ -16,12 +21,9 @@ display: flex;
 justify-content: center;
 } */
 .box {
-background:white;
-/* border: 1px solid red; */
 display: flex;
 align-items: center;
 justify-content: center;
-color: #AAA;
 }
 
 .addCaptionButton {
@@ -29,8 +31,8 @@ color: #AAA;
   height: 5vw;
   width: 5vw;
   border-radius: 2vw;
-  margin-left: 5vw;
-  margin-bottom: 5vw;           
+  margin-left: 3vw;
+  margin-bottom: 3vw;           
   }
 
 .deletePhotoButton {
@@ -45,11 +47,12 @@ background-color: #3D89F9;
 height: 5vw;
 width: 15vw;
 border-radius: 2vw;
+font-family: 'Inter', sans-serif;
+font-size: 1vw;
 }
 
 .uploadPhotoButton {
-/* background-color: #63BF7F; */
-background-color: pink;
+background-color: #63BF7F;
 height: 5vw;
 width: 5vw;
 border-radius: 2vw;
@@ -69,3 +72,4 @@ border-radius: 2vw;
   height: 3vw;
   width: 3vw;
 }
+
