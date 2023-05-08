@@ -10,10 +10,17 @@
   grid-template-rows: 200px 200px 200px;
   grid-template-columns: 200px 200px 200px;
   
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   object-position: center;
   background-attachment: fixed;
+}
+
+.caption {
+  object-position: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 3vw;
 }
 
 /* body {
@@ -56,6 +63,9 @@ background-color: #63BF7F;
 height: 5vw;
 width: 5vw;
 border-radius: 2vw;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .captionImage {
