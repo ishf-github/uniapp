@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
+import axios from 'axios';
 // TODO: Fix Zoom Issue
 // TODO: Fix Image Sizing Issue
 
@@ -10,6 +11,15 @@ import React,{useState} from 'react'
 export default function Home() {
   const [imageList, setImageList] = useState([{caption:"",imageUrl:"/browncow.jpg"},{caption:"",imageUrl:"/redhat.jpg"},{caption:"",imageUrl:"/flags.jpg"},{caption:"",imageUrl:"/bluecloth.jpg"}])
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect (()=>{
+    axios.get("https://mfrccsui2h.execute-api.eu-west-1.amazonaws.com/default/getDDBObjects")
+    .then((response) => {
+      console.log('Response data: ', response.data);
+    })
+    .catch((error) => {
+      console.error('Error: ', error);
+    });
+  },[])
 
   // const inter = Inter({ subsets: ['latin'] })
   // const imageUrl = "/browncow.jpg"
@@ -44,7 +54,7 @@ export default function Home() {
       <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <p class={styles.caption}>{imageList[currentIndex]?.caption}</p> 
       </div>     
-      <div class={styles.backgroundImage} style={{backgroundImage: `url(${imageList[currentIndex]?.imageUrl}`}}>
+      <div class={styles.backgroundImage} style={{backgroundImage: `url(${imageList[currentIndex]?.imageUrl})`}}>
         <div class={styles.box}></div>
         <div class={styles.box}>  
         </div>

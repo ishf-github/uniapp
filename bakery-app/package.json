@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-sdk": "^2.1375.0",
+    "axios": "^1.4.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
