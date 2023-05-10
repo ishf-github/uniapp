@@ -1,82 +1,100 @@
+/* This CSS class sets the height and width of an image to be 25% of the viewport width and applies a red background color */
+
 .CentreImage{
   height: 25vw;
   width: 25vw;
   background-color: red;
   
-}
-
-.backgroundImage {
-  display: grid;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-columns: 200px 200px 200px;
+  }
   
+  /* This CSS class sets the background image to cover the entire element, positions it in the center and makes it fixed with a grid display of 3 rows and 3 columns of equal width */
+  
+  .backgroundImage {
+  display: grid;
+  grid-template-rows: 15vw 15vw 15vw;
+  grid-template-columns: 15vw 15vw 15vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   object-position: center;
   background-attachment: fixed;
-}
-
-.caption {
+  }
+  
+  /* This CSS class sets the font family and size of the caption text to 3% of the viewport width and centers the text horizontally */
+  
+  .caption {
   object-position: center;
   font-family: 'Inter', sans-serif;
   font-size: 3vw;
-}
+  }
 
-/* body {
-display: flex;
-justify-content: center;
-} */
-.box {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.addCaptionButton {
+  
+  /* This CSS class centers its content both vertically and horizontally */
+  
+  .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  /* This CSS class styles the "Add caption" button with a yellow background color, a height and width of 5% of the viewport width, a border radius of 2% of the viewport width, and a bottom and left margin of 3% of the viewport width */
+  
+  .addCaptionButton {
   background-color: #FEC931;
   height: 5vw;
   width: 5vw;
   border-radius: 2vw;
   margin-left: 3vw;
-  margin-bottom: 3vw;           
+  margin-bottom: 3vw;
+  }
+  
+  /* This CSS class styles the "Delete photo" button with a red background color, a height and width of 5% of the viewport width, and a border radius of 2% of the viewport width */
+  
+  .deletePhotoButton {
+  background-color: #FD324E;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 2vw;
+  }
+  
+  /* This CSS class styles the "Next photo" button with a blue background color, a height of 5% of the viewport width, a width of 15% of the viewport width, a border radius of 2% of the viewport width, and uses the 'Inter' font with a size of 1% of the viewport width */
+  
+  .nextPhotoButton {
+  background-color: #3D89F9;
+  height: 5vw;
+  width: 15vw;
+  border-radius: 2vw;
+  font-family: 'Inter', sans-serif;
+  font-size: 1vw;
+  }
+  
+  /* This styles the "Upload photo" button with a green background color, a height and width of 5% of the viewport width, and a border radius of 2% of the viewport width. It also centers its content both vertically and horizontally */
+  
+  .uploadPhotoButton {
+  background-color: #63BF7F;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* This sets the height and width of the "Caption image" button to be 2% of the viewport width */
+  
+  .captionImage {
+  height: 2vw;
+  width: 2vw;
+  }
+  
+  /* This sets the height and width of the "Delete image" button to be 2% of the viewport width */
+  
+  .deleteImage {
+  height: 2vw;
+  width: 2vw;
   }
 
-.deletePhotoButton {
-background-color: #FD324E;
-height: 5vw;
-width: 5vw;
-border-radius: 2vw;
-}
-
-.nextPhotoButton {
-background-color: #3D89F9;
-height: 5vw;
-width: 15vw;
-border-radius: 2vw;
-font-family: 'Inter', sans-serif;
-font-size: 1vw;
-}
-
-.uploadPhotoButton {
-background-color: #63BF7F;
-height: 5vw;
-width: 5vw;
-border-radius: 2vw;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.captionImage {
-  height: 2vw;
-  width: 2vw;
-}
-
-.deleteImage {
-  height: 2vw;
-  width: 2vw;
-}
+/* This sets the height and width of the "Upload image" button to be 3% of the viewport width */
 
 .uploadImage {
   height: 3vw;
